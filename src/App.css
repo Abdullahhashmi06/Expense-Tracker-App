@@ -1,0 +1,300 @@
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
+:root {
+  --box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  /* background-color: #333333; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0;
+  font-family: 'Lato', sans-serif;
+  background: #1e130c;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, #9a8478, #1e130c);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, #9a8478, #1e130c); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.container {
+  margin: 30px auto;
+  width: 350px;
+  border-radius: 20px !important;
+  padding: 10px;
+}
+
+.overlay{
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px !important;
+}
+
+.expenseHead{
+  /*font-family: 'Indie Flower', cursive !important;*/
+  color: black;
+  color:#F5F5F5;
+  padding:20px;
+  letter-spacing: 2px;
+  border-radius: 10px;
+} 
+
+.brdr{
+  border-top:1px dotted #F5F5F5 !important;
+  width:100%;
+}
+
+.balance {
+  color: white;
+  font-size:24px !important;
+}
+
+.balanceMoney {
+  color: white;
+  font-size:24px !important;
+  text-align:right;
+}
+
+h1 {
+  letter-spacing: 1px;
+  margin: 0;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color:rgba(255, 255, 255, 0.12);
+  box-shadow: var(--box-shadow);
+  padding: 20px;
+  /* display: flex;
+  justify-content: space-between; */
+  border-radius: 5px;
+  margin: 15px !important;
+}
+
+.inc-exp-container > div {
+  text-align: left;
+}
+
+/* .inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+} */
+
+.incExp {
+  color: white;
+}
+
+.inc, .exp {
+  display: inline-block !important;  
+}
+
+.formDiv {
+  margin-top: 25px !important;
+}
+
+.divTable{
+	display: table;
+	width: 100%;
+}
+.divTableRow {
+	display: table-row;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+}
+.divTableCell, .divTableHead {
+	display: table-cell;
+	padding: 3px 10px;
+}
+.divTableHeading {
+	background-color: #EEE;
+	display: table-header-group;
+	font-weight: bold;
+}
+.divTableFoot {
+	background-color: #EEE;
+	display: table-footer-group;
+	font-weight: bold;
+}
+.divTableBody {
+	display: table-row-group;
+}
+
+
+.money {
+  letter-spacing: 2px;
+  color: white;
+  font-size: 18px;
+}
+
+.money.plus {
+  color: #2ecc71 !important;
+  text-align: right !important;
+  font-size: 18px;
+}
+
+.money.minus {
+  color: #990000 !important;
+  text-align: right !important;
+  font-size: 18px;
+}
+
+
+/* label {
+  display: inline-block;
+  margin: 10px 0;
+} */
+
+form{
+  margin: 15px !important;
+  color:white;
+}
+
+input[type='text'],
+input[type='number'] {
+  border:0;
+  border-bottom: 1px solid rgba(255,255,255,0.6);
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+
+  background-color: rgba(0, 0, 0, 0.12);
+  color:white;
+}
+
+.balDiv, .expenseHead{
+  text-align: center;
+}
+
+
+
+.incomeBtn {
+  cursor: pointer;
+  background-color: #28a745;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: inline-block !important;
+  font-size: 16px;
+  margin: 10px 15px;
+  margin-top: 25px !important;
+  padding: 10px;
+  width: 40%;
+  border-radius: 3px;
+}
+
+.expenseBtn{
+  cursor: pointer;
+  background-color: #dc3545;
+  box-shadow: var(--box-shadow);
+  color: #fff;
+  border: 0;
+  display: inline-block !important;
+  font-size: 16px;
+  margin: 10px 5% 30px;
+  padding: 10px;
+  width: 40%;
+  border-radius: 3px;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.listContainer{
+ max-height:150px !important;
+  overflow-y: scroll;
+  margin: 15px !important;
+}
+
+.list {
+
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.newTransac {
+  font-weight: 300;
+  color: white;
+  text-align: center;
+}
+
+.delIcon{
+  height:16px;
+  width:16px;
+  margin-top:5px;
+  cursor: pointer;
+}
+
+.list li {
+  align-self: center;
+  background-color: #fff;
+  box-shadow: var(--box-shadow);
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px;
+}
+
+.list li.plus {
+  border-right: 10px solid #2ecc71;
+  background-color: #e5fbe5;
+}
+
+.list li.minus {
+  border-right: 10px solid #c0392b;
+}
+
+.delete-btn {
+  cursor: pointer;
+  background-color: #e74c3c;
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left:0 !important;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delete-btn {
+  opacity: 1;
+}
+
+.copyRight{
+  text-align: center;
+  padding-bottom:10px !important;
+  color:#F2F2F2;
+  opacity: 0.2;
+}
+
+@media (max-width: 320px) {
+  .container {
+    width: 300px;
+  }
+}
